@@ -1,0 +1,20 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><comment id="|INi}S`/ZtOqujFvzXON" data="0" x="0" y="0" h="565" w="484">8 Concepts Learned (Pick the 8 you used, delete the others):
+-Sprites
+-Sprite Position (coordinates: x and y)
+-Controller (dx) and move mySprite with buttons
+-overlap Events / sprite kind
+-"Spawning" sprites: create and on created
+-random
+-Displaying numbers (1, 2, 3) as a string ("123")
+-score and life
+-countdown
+-stay in screen and ghost
+-set image
+-sprite say
+-splash
+
+Key Features (List the Key Features You Will Need For Your Game, replace examples)
+- ex. Playable Sprite
+- ex. player can move up/down left/right
+- ex. player can collide with enemy
+- ex. enemy decreases player life</comment><block type="pxt-on-start" id="7S?J-Fp?p3B|`2e`f1h(" x="10" y="10"></block></xml>
