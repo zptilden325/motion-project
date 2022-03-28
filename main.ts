@@ -1,7 +1,10 @@
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
-    fish.destroy()
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Food, function (sprite, otherSprite) {
+    fish.setPosition(randint(0, 160), randint(0, 120))
     fish.startEffect(effects.bubbles)
     info.changeScoreBy(1)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+	
 })
 /**
  * 8 Concepts Learned (Pick the 8 you used, delete the others):
@@ -184,6 +187,7 @@ scene.setBackgroundImage(img`
     6cccccccccccccc66666ccccccccccccccccccc666ccccc6666ccccccccccccccf666666666666ff6666ffffffff6666666666666666666ccccccccccccccc6cccccccccccccccccccccccccccccccc8
     `)
 controller.moveSprite(Shark)
+Shark.setFlag(SpriteFlag.StayInScreen, true)
 fish = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . c c c c . . . . 
@@ -201,7 +205,24 @@ fish = sprites.create(img`
     . . . . f f 4 4 4 4 c d b c . . 
     . . . . . . f f f f d d d c . . 
     . . . . . . . . . . c c c . . . 
-    `, SpriteKind.Enemy)
+    `, SpriteKind.Food)
 fish.setPosition(randint(0, 160), randint(0, 120))
+let mySprite = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Enemy)
 info.setScore(0)
-Shark.setFlag(SpriteFlag.StayInScreen, true)
